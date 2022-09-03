@@ -2,5 +2,10 @@
 build-by-default: true
 branches:
 - main
-projects: []
+projects:
+  BlossomBridge:
+    path: ""
+    libs:
+      - src: CortexPE\Commando
+        version: ^3.1.0
 ...
