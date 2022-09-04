@@ -29,7 +29,7 @@ class EventListener implements Listener{
     public function onQuit(PlayerQuitEvent $event){
         $player = $event->getPlayer();
         if(($game = TheBridge::getInstance()->getPlayerGame($player)) instanceof Game){
-            $game->broadcastCustomMessage("§l§d»§r§b " . TextFormat::AQUA . $player->getName() . " §cdisconnected from your §l§aThe§2Bridge§r§e game§6!");
+            $game->broadcastCustomMessage(" §l§d»§r§b " . TextFormat::AQUA . $player->getName() . " §cdisconnected from your §l§aThe§2Bridge§r§e game§6!");
             $game->removePlayer($player);
         }
     }
@@ -48,7 +48,7 @@ class EventListener implements Listener{
             foreach (["red","blue"] as $team){
                 if($event->getBlock()->getPosition()->distance($game->getPureArenaInfo()[$team . "goal"]) < 10){
                     $event->cancel();
-                    $player->sendMessage(TextFormat::RED . "§l§d»§r§c Your too close to your opponents goal to place blocks!");
+                    $player->sendMessage(TextFormat::RED . " §l§d»§r§c Your too close to a goal to place blocks!");
                     return;
                 }
             }
@@ -139,7 +139,7 @@ class EventListener implements Listener{
             /** @var Vector3 $enemygoal */
             $enemygoal = $game->getPureArenaInfo()[Utils::getEnemyTeam($game->getTeam($player)) . "goal"];
             if($player->getLocation()->distance($owngoal) <= 3){
-                $player->sendMessage(TextFormat::RED . "§l§d»§r§c You cant score in your own goal, silly!");
+                $player->sendMessage(TextFormat::RED . " §l§d»§r§c You cant score in your own goal, silly!");
                 $game->respawnPlayer($player, true);
                 return;
             }
