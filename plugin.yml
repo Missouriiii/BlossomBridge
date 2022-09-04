@@ -1,6 +1,6 @@
 name: TheBridge
 main: SandhyR\TheBridge\TheBridge
-authors: ["SandhyR, Tuvqlu"]
+author: SandhyR
 api: 4.0.0
 version: 1.0
 
