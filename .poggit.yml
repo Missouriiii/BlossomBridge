@@ -5,7 +5,4 @@ branches:
 projects:
   BlossomBridge:
     path: ""
-    libs:
-      - src: Muqsit/SimplePacketHandler/SimplePacketHandler
-        version: ^0.1.0
 ...
