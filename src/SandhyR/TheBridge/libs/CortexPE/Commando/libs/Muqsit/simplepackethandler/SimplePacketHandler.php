@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SandhyR\TheBridge\libs\CortexPE\Commando\libs\muqsit\simplepackethandler;
+namespace SandhyR\TheBridge\libs\CortexPE\Commando\libs\muqsit\simplepackethandler\SimplePacketHandler;
 
 use InvalidArgumentException;
 use SandhyR\TheBridge\libs\CortexPE\Commando\libs\muqsit\simplepackethandler\interceptor\IPacketInterceptor;
