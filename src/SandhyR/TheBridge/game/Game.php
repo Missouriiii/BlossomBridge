@@ -206,7 +206,8 @@ class Game
                         ScoreFactory::setScoreLine($player, 6, "§eMode: " . TextFormat::WHITE . "Solos");
                         ScoreFactory::setScoreLine($player, 7, "  ");
                         ScoreFactory::setScoreLine($player, 8, TextFormat::RED . "Waiting for more players...");
-                        ScoreFactory::setScoreLine($player, 9, TheBridge::getInstance()->getConfig()->get("server-ip"));
+                        ScoreFactory::setScoreLine($player, 9, "  ");
+                        ScoreFactory::setScoreLine($player, 10, TheBridge::getInstance()->getConfig()->get("server-ip"));
                         ScoreFactory::sendObjective($player);
                         ScoreFactory::sendLines($player);
                     }
@@ -349,7 +350,7 @@ class Game
         $player->setHealth(20);
         $player->getHungerManager()->setFood(20);
         $player->getInventory()->setItem(8, VanillaItems::COMPASS()->setCustomName("Leave"));
-        $this->broadcastCustomMessage("§l§d»§r§b " . $player->getName() . " §ajoined your §l§aThe§2Bridge§r§e game§6!");
+        $this->broadcastCustomMessage(" §l§d»§r§b " . $player->getName() . " §ajoined your §l§aThe§2Bridge§r§e game§6!");
         if (count($this->players) == 2) {
             $this->phase = "COUNTDOWN";
         }
